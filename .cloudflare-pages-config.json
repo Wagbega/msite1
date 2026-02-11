@@ -1,0 +1,19 @@
+{
+  "build": {
+    "command": "npm run build",
+    "cwd": "/",
+    "root_dir": "dist"
+  },
+  "env": {
+    "production": {
+      "vars": {
+        "VITE_ENVIRONMENT": "production"
+      }
+    },
+    "preview": {
+      "vars": {
+        "VITE_ENVIRONMENT": "preview"
+      }
+    }
+  }
+}

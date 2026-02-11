@@ -1,0 +1,26 @@
+name = "softcraft-technologies"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+
+env = {production = {name = "softcraft-technologies-prod", routes = [{pattern = "yourdomain.com", zone_name = "yourdomain.com"}]}}
+
+[env.production]
+name = "softcraft-technologies-prod"
+routes = [
+  {pattern = "yourdomain.com", zone_name = "yourdomain.com"}
+]
+
+[build]
+command = "npm run build"
+cwd = "./dist"
+main = "index.html"
+
+[build.upload]
+format = "service-worker"
+
+[env.production.build]
+command = "npm run build"
+cwd = "./dist"
