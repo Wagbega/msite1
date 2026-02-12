@@ -1,7 +1,7 @@
 {
   "build": {
     "command": "npm run build",
-    "cwd": "/",
+    "runtime": "nodejs_18",
     "root_dir": "dist"
   },
   "env": {

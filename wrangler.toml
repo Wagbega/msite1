@@ -1,26 +1,17 @@
 name = "softcraft-technologies"
 type = "javascript"
-account_id = ""
-workers_dev = true
-route = ""
-zone_id = ""
 
-env = {production = {name = "softcraft-technologies-prod", routes = [{pattern = "yourdomain.com", zone_name = "yourdomain.com"}]}}
-
-[env.production]
-name = "softcraft-technologies-prod"
-routes = [
-  {pattern = "yourdomain.com", zone_name = "yourdomain.com"}
-]
+# Cloudflare Pages configuration
+pages_build_caching = true
 
 [build]
 command = "npm run build"
-cwd = "./dist"
-main = "index.html"
+cwd = "./"
+root_dir = "dist"
 
 [build.upload]
 format = "service-worker"
 
-[env.production.build]
-command = "npm run build"
-cwd = "./dist"
+[env.production]
+name = "softcraft-technologies-prod"
+route = "yourdomain.com"
